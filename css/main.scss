@@ -1,0 +1,313 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+body {
+	height: 100vh;
+	margin: 0;
+	font-family: "poppins", arial;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	width: 100%;
+}
+
+.nav-container {
+	background-color: #6700ee;
+	a {
+		color: #fff;
+	}
+}
+
+header {
+	padding: 2em;
+	display: flex;
+	justify-content: space-between;
+	.logo {
+		color: #58e8ff;
+		font-weight: bold;
+	}
+	ul {
+		display: flex;
+		a {
+			// display: block;
+			padding: 0 1em;
+		}
+	}
+}
+
+.social-header,
+.hero-design {
+	display: none;
+}
+
+.hero {
+	background-color: #6e00ff;
+	display: grid;
+	text-align: center;
+	color: #fff;
+	padding: 4em;
+	.meet {
+		display: flex;
+		justify-content: center;
+		width: 200px;
+		margin: 0 auto;
+		font-weight: bold;
+		gap: 0.5em;
+		align-items: center;
+		p {
+			color: #ff64cb;
+		}
+	}
+
+	.scroll {
+		width: 30px;
+		margin-top: 2em;
+	}
+}
+
+section {
+	padding: 4em 2em;
+	text-align: center;
+}
+
+.featured {
+	position: relative;
+
+	img {
+		border-radius: 1em;
+	}
+}
+
+.featured::before {
+	content: "";
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	background: #6e00ff;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	opacity: 0.2;
+}
+
+.subtitle {
+	text-transform: uppercase;
+	color: #6e00ff;
+	font-weight: bold;
+	letter-spacing: 0.2em;
+	font-size: 0.85em;
+}
+
+.featured-title {
+	color: #000;
+	font-weight: bold;
+	font-size: 1.5em;
+	margin-top: -0.4em;
+	display: block;
+}
+
+.featured-desc {
+	color: #525252;
+	font-size: 0.9em;
+	line-height: 1.8em;
+	font-weight: 500;
+	margin-bottom: 3em;
+}
+
+.skills {
+	background-color: #f85ecd;
+	ul li {
+		background-color: #fff;
+		border-radius: 1em;
+		padding: 3em 2em;
+		margin: 1em 0;
+
+		.icon-container {
+			height: 100px;
+			display: grid;
+			place-content: center;
+			margin: 0 auto;
+			&.one {
+				width: 80px;
+			}
+			&.two {
+				width: 80px;
+			}
+			&.three {
+				width: 60px;
+			}
+		}
+
+		.skill-title {
+			font-weight: bold;
+			font-size: 1.2em;
+			margin: 2em 0;
+		}
+
+		.skill-desc {
+			color: #525252;
+			line-height: 1.8em;
+			font-size: 0.9em;
+		}
+	}
+}
+.portfolio {
+	background-color: #f7f7f7;
+	img {
+		border-radius: 1em;
+		margin-bottom: 2em;
+	}
+}
+
+@media (min-width: 850px) {
+	.featured,
+	.portfolio {
+		text-align: left;
+	}
+
+	.featured,
+	.portfolio-container {
+		display: grid;
+		grid-template-columns: 40% auto;
+
+		.left,
+		.portfolio-left {
+			display: grid;
+			place-content: center;
+		}
+
+		.right {
+			margin-left: 2em;
+			margin-top: 1em;
+		}
+	}
+
+	.skills {
+		margin-top: -7em;
+		margin-bottom: -7em;
+		padding-top: 7em;
+		.skills-container ul {
+			display: flex;
+			gap: 1em;
+		}
+	}
+
+	.portfolio {
+		padding-top: 7em;
+	}
+
+	.portfolio-container img {
+		margin-left: 2em;
+	}
+}
+
+@media (min-width: 1050px) {
+	.nav-container {
+		display: grid;
+		grid-template-columns: 66% auto;
+		background: unset;
+
+		header {
+			padding: 2em 2em 2em 4em;
+			background-color: #6700ee;
+		}
+		.social-header {
+			display: block;
+			padding: 2em 4em 2em 0em;
+			ul {
+				display: flex;
+				justify-content: space-between;
+				width: 15em;
+				float: right;
+				img {
+					width: 30px;
+				}
+			}
+		}
+	}
+
+	.hero {
+		display: grid;
+		grid-template-columns: 66% auto;
+		background-color: unset;
+		padding: 0;
+		height: 90vh;
+
+		.content {
+			background-color: #6e00ff;
+			padding: 6em 8em 6em 4em;
+			text-align: left;
+
+			h1 {
+				font-size: 3em;
+				line-height: 1.2em;
+			}
+
+			.meet {
+				margin: 0;
+				justify-content: flex-start;
+			}
+		}
+		.hero-design {
+			display: block;
+			margin-left: -50%;
+			margin-top: 15%;
+			width: 100%;
+		}
+	}
+
+	section {
+		padding: 4em;
+	}
+
+	.portfolio img {
+		max-width: 500px;
+	}
+}
+
+@media (min-width: 1250px) {
+	.nav-container {
+		header {
+			padding: 2em 2em 2em 10em;
+		}
+		.social-header {
+			padding: 2em 10em 2em 0em;
+		}
+	}
+
+	section {
+		padding: 10em 10em 4em 10em;
+	}
+
+	.hero .content {
+		padding: 6em 8em 6em 10em;
+	}
+}
+
+@media (min-width: 1550px) {
+	.nav-container {
+		header {
+			padding: 2em 2em 2em 20em;
+		}
+		.social-header {
+			padding: 2em 20em 2em 0em;
+		}
+	}
+
+	section {
+		padding: 10em 10em 4em 20em;
+	}
+
+	.hero .content {
+		padding: 6em 8em 6em 20em;
+	}
+}
